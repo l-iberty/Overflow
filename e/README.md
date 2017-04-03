@@ -50,6 +50,6 @@ overflow执行ret指令时esp指向z单元，执行ret后(eip)=callme入口地�
 
 ## 完整的python代码即运行结果如下:
 
-![test2.py](screenshot/test2.py.PNG)
+![test2.py](screenshot/test2.py.png)
 
 ![res](screenshot/res.PNG)
