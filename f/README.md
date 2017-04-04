@@ -3,9 +3,9 @@
 
 ## 预备知识
 ### GOT(Global Offset Table)
-**概念：**每一个外部定义的符号在全局偏移表（Global offset Table）中有相应的条目，GOT位于ELF的数据段中，叫做GOT段。
+**概念**: 每一个外部定义的符号在全局偏移表（Global offset Table）中有相应的条目，GOT位于ELF的数据段中，叫做GOT段。
 
-**作用：**把位置无关的地址计算重定位到一个绝对地址。程序首次调用某个库函数时，运行时连接编辑器（rtld）找到相应的符号，并将它重定位到GOT之后每次调用这个函数都会将控制权直接转向那个位置，而不再调用rtld。
+**作用**: 把位置无关的地址计算重定位到一个绝对地址。程序首次调用某个库函数时，运行时连接编辑器（rtld）找到相应的符号，并将它重定位到GOT之后每次调用这个函数都会将控制权直接转向那个位置，而不再调用rtld。
 
 ### PLT(Procedure Linkage Table)
 过程连接表(Procedure Linkage Table)，一个PLT条目对应一个GOT条目.
