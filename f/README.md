@@ -40,11 +40,13 @@ ebp-0xc为局部变量a的地址，未初始化的条件下那里的内存内容
 注意到buffer长24字节，fgets读入33字节(键入32个非换行符字符后敲回车发送第33个字符——换行符——结束). 结合栈映像可知，通过溢出最多只能覆盖到局部变量a的后一个字节处，无法覆盖返回地址. 所以**思路是**：借助源码中scanf的漏洞，让用户的输入覆盖GOT表中的某个函数；显然，覆盖exit更容易. 但要让scanf得以执行就必须用0xCAFEBABE覆盖局部变量key. 至于24字节的buffer，就用system("/bin/sh")的汇编代码作为shellcode来填充，它有23字节.
 
 综上，得出 `payload = shellcode + 'A' + p32(0xCAFEBABC) + p32(exit_got_addr)`
-其中，`exit_got_addr`为exit的地址，从GOT表获取：
+其中，`exit_got_addr`为exit在GOT表中的地址：
 
 ![exit_addr](screenshot/exit_addr.PNG)
 
-填充后栈的内容变为:
+即：内存地址0x084a018单元处存放着exit的入口地址
+
+**填充后栈的内容变为**:
 
 ![stack2](screenshot/stack2.PNG)
 

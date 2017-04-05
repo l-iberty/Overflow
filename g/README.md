@@ -24,7 +24,7 @@
 
 ![stack_of_getflag](screenshot/stack_of_getflag.PNG)
 
-由此可知，程序执行时两个函数的栈影响如下图所示:
+由此可知，程序执行时两个函数的栈映像如下图所示:
 
 ![stack](screenshot/stack.PNG)
 
@@ -38,7 +38,7 @@
 
 结合源代码可知，`get_name_data`的返回值`user_code` = 9800，`get_flag`的局部变量`tmp1` = 9800, `tmp2` = 1228，由此计算出来的`result` != 1792. 其中，`tmp2`的1228是以9800为种子计算出来的一个随机数取模结果.
 
-设`str[96`,`str[97]`,`str[98]`,`str[99]`构成的4字节int值为`x`，则:
+设`str[96]`,`str[97]`,`str[98]`,`str[99]`构成的4字节int值为`x`，则:
 
 `result = x + 9800 + 1228`,
 
