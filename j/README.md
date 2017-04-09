@@ -67,7 +67,7 @@
 
 `getflag:`
 
-![code_getflag](screenshot/code_flag.png)
+![code_getflag](screenshot/code_getflag.png)
 
 ### 思路
 借助`printf`的漏洞，覆盖`_IO_putc`在GOT表中的入口地址为`getflag`的入口地址，将`_IO_putc`的调用跳转到`getflag`
