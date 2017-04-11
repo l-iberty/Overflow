@@ -24,7 +24,7 @@ pwn8笔记中提到的`读内存`实验中，只实现了根据偏移量实现�
 
 ## python脚本
 
-[exp](screenshot/test9.py)
+[exp](test9.py)
 
 
 ## More
