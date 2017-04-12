@@ -24,8 +24,9 @@ pwn8笔记中提到的`读内存`实验中，只实现了根据偏移量实现�
 
 ## python脚本
 
-[exp](test9.py)
-
+![exp1](screenshot/exp1.png)
+![exp2](screenshot/exp2.png)
+![exp3](screenshot/exp3.png)
 
 ## More
 将 `_IO_putc`入口修改为`main`函数入口时，构造payload时发生了诡异的事情.
