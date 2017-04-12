@@ -2,9 +2,7 @@
 
 ## IDA分析二进制文件
 
-`main:`
-
-![main](screenshot.main.png)
+`main`函数中只调用了`func()`
 
 反编译`func`:
 
