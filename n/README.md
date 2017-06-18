@@ -154,7 +154,7 @@ int main(int argc, char const *argv[])
 
 ![vfp](screenshot/vfp.png)
 
-> 0x8049628即虚表地址，而0x8050a38是`Woman`对象的地址，我曾混淆了他们. 此外可以看到`give_shell`是虚表里的第一个函数
+> 0x8049268即虚表地址，而0x8050a38是`Woman`对象的地址，我曾混淆了他们. 此外可以看到`give_shell`是虚表里的第一个函数
 
 ### exp虽然短小，但来之不易:
 [exp.py](exp.py)
