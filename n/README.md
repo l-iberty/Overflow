@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-这次把虚表指针的地址`vfp`填入`buf`，从前面的实验可知，最后一次调用`handleObj(apple)`时，`buf`和`apple`指向同一块内存. 也就是说，向`buf`填入虚表地址后相当于重建了之前`apple`指向的`Apple`对象，测试结果也证明了这一点:
+这次把虚表的地址`vfp`填入`buf`，从前面的实验可知，最后一次调用`handleObj(apple)`时，`buf`和`apple`指向同一块内存. 也就是说，向`buf`填入虚表地址后相当于重建了之前`apple`指向的`Apple`对象，测试结果也证明了这一点:
 
 ![uaftest3](screenshot/uaftest3.png)
 
